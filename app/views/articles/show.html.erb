@@ -1,6 +1,8 @@
 
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
+<h3>Comments</h3>
+<%= render partial: 'articles/comment', collection: @article.comments %>
 <p><%= link_to "edit", edit_article_path(@article) %></p>
 <%= link_to "delete", article_path(@article), method: :delete %>
 <br>
